@@ -12,14 +12,14 @@ kernel = np.array([[1, 0, -1],
                    [1, 0, -1],
                    [1, 0, -1]])
 filtered = cv2.filter2D(src=image, kernel=kernel, ddepth=-1)
-cv2.imshow('vertical edges', filtered)
+cv2.imshow('horizontal edges', filtered)
 
 # vertical edge detector
 kernel = np.array([[1,  1,  1],
                    [0,  0,  0],
                    [-1, -1, -1]])
 filtered = cv2.filter2D(src=image, kernel=kernel, ddepth=-1)
-cv2.imshow('horizontal edges', filtered)
+cv2.imshow('vertical edges', filtered)
 
 # blurring ("box blur", because it's a box of ones)
 kernel = np.array([[1, 1, 1],
