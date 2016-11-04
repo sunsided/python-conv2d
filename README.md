@@ -10,7 +10,7 @@ kernel = np.array([[1, 0, -1],
                    [1, 0, -1]])
 
 filtered = cv2.filter2D(src=image, kernel=kernel, ddepth=-1)
-cv2.imshow('vertical edges', filtered)
+cv2.imshow('horizontal edges', filtered)
 ```
 
 In addition, `convolution_manual.py` implements a manual 2D convolution to explain the concept.
