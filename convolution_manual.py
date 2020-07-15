@@ -49,8 +49,8 @@ for y in range(i_height):
         #                        image[y,  x  ] * kernel[ 0, 0] +
         #                        etc.
 
-        for ky in range(-(k_height / 2), k_height - 1):
-            for kx in range(-(k_width / 2), k_width - 1):
+        for ky in range(-(k_height // 2), k_height - 1):
+            for kx in range(-(k_width // 2), k_width - 1):
                 pixel = 0
                 pixel_y = y - ky
                 pixel_x = x - kx
@@ -62,7 +62,7 @@ for y in range(i_height):
 
                 # get the weight at the current kernel position
                 # (also un-shift the kernel coordinates into the valid range for the array.)
-                weight = kernel[ky + (k_height / 2), kx + (k_width / 2)]
+                weight = kernel[ky + (k_height // 2), kx + (k_width // 2)]
 
                 # weigh the pixel value and sum
                 weighted_pixel_sum += pixel * weight
